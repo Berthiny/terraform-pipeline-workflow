@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-               checkout([$class: 'GitSCM', branches: [[name: '**']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Berthiny/Thursday-Tf-module-.git']]])
+              checkout scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Berthiny/Thursday-Tf-module']])
             }
         }
         
