@@ -40,10 +40,11 @@ pipeline {
             }
         }
         
-        stage('terraform destroy') {
+        stage('terraform apply') {
             steps {
-                sh 'terraform destroy --auto-approve'
+                sh 'terraform apply --auto-approve'
             }
         }    
     }
 }
+
